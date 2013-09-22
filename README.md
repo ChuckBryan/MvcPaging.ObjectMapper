@@ -21,3 +21,8 @@ and now AutoMapper will be able to Map to a PagedList<T>:
 var _sources = new List<SourceClass> { new SourceClass { Id = 1, Name = "Source Class" } };
 var _destination = Mapper.Map<PagedList<DestinationClass>>(sourcePagedList);
 ```
+
+And, it's available on NuGet
+```
+PM> Install-Package MvcPaging.ObjectMapper
+```

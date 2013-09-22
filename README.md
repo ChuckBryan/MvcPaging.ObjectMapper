@@ -1,4 +1,4 @@
-AutoMapper PagedList Object Mapper
+MvcPaging IPagedListMapper for AutoMapper
 ===================
 
 I am a big fan of the MvcPaging Library (https://github.com/martijnboland/MvcPaging) and AutoMapper (https://github.com/AutoMapper/AutoMapper).

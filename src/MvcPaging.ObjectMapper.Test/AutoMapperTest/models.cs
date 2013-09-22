@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace MvcPaging.AutoMapper.Test.AutoMapperTest
+namespace MvcPaging.ObjectMapper.Test.AutoMapperTest
 {
     public class DestinationClass
     {

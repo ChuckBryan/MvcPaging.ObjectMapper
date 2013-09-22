@@ -3,7 +3,7 @@ using System.Linq;
 using AutoMapper;
 using NUnit.Framework;
 
-namespace MvcPaging.AutoMapper.Test.AutoMapperTest
+namespace MvcPaging.ObjectMapper.Test.AutoMapperTest
 {
     public class WhenMappingPagedList : AAA
     {

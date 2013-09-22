@@ -4,7 +4,7 @@ using AutoMapper;
 using AutoMapper.Mappers;
 using NUnit.Framework;
 
-namespace MvcPaging.AutoMapper.Test.AutoMapperTest
+namespace MvcPaging.ObjectMapper.Test.AutoMapperTest
 {
     public class WhenRegisteringObjectMapper : AAA
     {

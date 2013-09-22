@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcPaging.AutoMapper", "src\MvcPagingObjectMapper\MvcPaging.AutoMapper.csproj", "{EAE127E2-03F7-4B66-9732-3D74EB900331}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcPaging.ObjectMapper", "src\MvcPaging.ObjectMapper\MvcPaging.ObjectMapper.csproj", "{EAE127E2-03F7-4B66-9732-3D74EB900331}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcPaging.AutoMapper.Test", "src\MvcPagingObjectMapper.Test\MvcPaging.AutoMapper.Test.csproj", "{5BEE462B-CF8D-43E8-993E-79B1FD21913B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcPaging.ObjectMapper.Test", "src\MvcPaging.ObjectMapper.Test\MvcPaging.ObjectMapper.Test.csproj", "{5BEE462B-CF8D-43E8-993E-79B1FD21913B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

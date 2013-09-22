@@ -4,7 +4,7 @@ using System.Reflection;
 using AutoMapper;
 using AutoMapper.Mappers;
 
-namespace MvcPaging.AutoMapper
+namespace MvcPaging.ObjectMapper
 {
     public class PagedListMapper : IObjectMapper
     {

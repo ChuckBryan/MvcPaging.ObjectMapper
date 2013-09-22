@@ -1,6 +1,6 @@
 ﻿using NUnit.Framework;
 
-namespace MvcPaging.AutoMapper.Test
+namespace MvcPaging.ObjectMapper.Test
 {
     public abstract class AAA
     {

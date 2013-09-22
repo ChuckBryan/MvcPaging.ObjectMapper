@@ -16,6 +16,7 @@ With this IObjectMapper, I can write a standard AutoMapper Create Map statement:
 Mapper.CreateMap<SourceClass, DestinationClass>();
 
 and then use that to map to a Paged List:
+```
 var _sources = new List<SourceClass> { new SourceClass { Id = 1, Name = "Source Class" } };
 var _destination = Mapper.Map<PagedList<DestinationClass>>(sourcePagedList);
-
+```

@@ -13,8 +13,9 @@ I found a great article at http://bzbetty.blogspot.com/2012/06/automapperactionf
 his article and then built my tests until I got them working satisfactorily.
 
 With this IObjectMapper, I can write a standard AutoMapper Create Map statement:
+```
 Mapper.CreateMap<SourceClass, DestinationClass>();
-
+```
 and then use that to map to a Paged List:
 ```
 var _sources = new List<SourceClass> { new SourceClass { Id = 1, Name = "Source Class" } };

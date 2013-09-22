@@ -61,7 +61,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\AutoMapperPagedList\MvcPaging.AutoMapper.csproj">
+    <ProjectReference Include="..\MvcPagingObjectMapper\MvcPaging.AutoMapper.csproj">
       <Project>{eae127e2-03f7-4b66-9732-3d74eb900331}</Project>
       <Name>MvcPaging.AutoMapper</Name>
     </ProjectReference>

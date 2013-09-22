@@ -1,13 +1,12 @@
-﻿using AutoMapper;
-using AutoMapper.Mappers;
-using MvcPaging;
-using System;
+﻿using System;
 using System.Linq;
 using System.Reflection;
+using AutoMapper;
+using AutoMapper.Mappers;
 
-namespace AutoMapperPagedList
+namespace MvcPaging.AutoMapper
 {
-    public class PagedListObjectMapper : IObjectMapper
+    public class PagedListMapper : IObjectMapper
     {
         private IMappingEngineRunner _mapper;
 
@@ -29,7 +28,7 @@ namespace AutoMapperPagedList
 
             Type sourceType = context.SourceType.GetGenericArguments()[0];
 
-            MethodInfo method = typeof(PagedListObjectMapper).GetMethod("CreatePagedList")
+            MethodInfo method = typeof(PagedListMapper).GetMethod("CreatePagedList")
                 .MakeGenericMethod(sourceType, destinationType);
 
             return method.Invoke(this, new[] { context.SourceValue });
@@ -53,7 +52,7 @@ namespace AutoMapperPagedList
         /// </summary>
         public static void Register()
         {
-            var allMappers = new[] { new PagedListObjectMapper() }.Union(MapperRegistryOverride.AllMappers());
+            var allMappers = new[] { new PagedListMapper() }.Union(MapperRegistryOverride.AllMappers());
             MapperRegistryOverride.AllMappers = () => allMappers;
         }
     }

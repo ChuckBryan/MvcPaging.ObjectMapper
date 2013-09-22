@@ -4,7 +4,7 @@ using AutoMapper;
 using AutoMapper.Mappers;
 using NUnit.Framework;
 
-namespace AutoMapperPagedList.Test.AutoMapperTest
+namespace MvcPaging.AutoMapper.Test.AutoMapperTest
 {
     public class WhenRegisteringObjectMapper : AAA
     {
@@ -21,7 +21,7 @@ namespace AutoMapperPagedList.Test.AutoMapperTest
 
         protected override void Arrange()
         {
-            PagedListObjectMapper.Register();
+            PagedListMapper.Register();
         }
 
         [Test]
@@ -30,7 +30,7 @@ namespace AutoMapperPagedList.Test.AutoMapperTest
             var firstMapper = _allMappers.FirstOrDefault();
 
             Assert.IsNotNull(firstMapper);
-            Assert.IsTrue(firstMapper.GetType() == typeof(PagedListObjectMapper));
+            Assert.IsTrue(firstMapper.GetType() == typeof(PagedListMapper));
         }
     }
 }

@@ -1,10 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using AutoMapper;
-using MvcPaging;
 using NUnit.Framework;
 
-namespace AutoMapperPagedList.Test.AutoMapperTest
+namespace MvcPaging.AutoMapper.Test.AutoMapperTest
 {
     public class WhenMappingPagedList : AAA
     {
@@ -28,7 +27,7 @@ namespace AutoMapperPagedList.Test.AutoMapperTest
         protected override void Arrange()
         {
 
-            PagedListObjectMapper.Register();
+            PagedListMapper.Register();
 
             Mapper.CreateMap<SourceClass, DestinationClass>();
 

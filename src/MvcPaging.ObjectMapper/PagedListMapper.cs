@@ -12,11 +12,13 @@ namespace MvcPaging.ObjectMapper
 
         public TDest Map<TDest>(object source)
         {
+
+
             TypeMap typeMap = _mapper.ConfigurationProvider.FindTypeMapFor(source, default(TDest), source.GetType(), typeof(TDest));
 
             var mappingOperationOptions = new MappingOperationOptions();
-            var resolutionContext = new ResolutionContext(typeMap, source, source.GetType(), typeof(TDest), mappingOperationOptions);
-
+            var resolutionContext = new ResolutionContext(typeMap, source, source.GetType(), typeof(TDest), mappingOperationOptions, Mapper.Engine);// IMappingEngine engine
+       
             return (TDest)_mapper.Map(resolutionContext);
         }
 
@@ -52,8 +54,13 @@ namespace MvcPaging.ObjectMapper
         /// </summary>
         public static void Register()
         {
-            var allMappers = new[] { new PagedListMapper() }.Union(MapperRegistryOverride.AllMappers());
-            MapperRegistryOverride.AllMappers = () => allMappers;
+            var allMappers = new[] {new PagedListMapper()}.Union(MapperRegistry.Mappers.ToList());
+
+            MapperRegistry.Mappers.Clear();
+
+            allMappers.ToList().ForEach(mapper=> MapperRegistry.Mappers.Add(mapper));
+
+
         }
     }
 }

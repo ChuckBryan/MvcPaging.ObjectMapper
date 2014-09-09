@@ -9,6 +9,7 @@ namespace MvcPaging.ObjectMapper.Test.AutoMapperTest
     public class WhenRegisteringObjectMapper : AAA
     {
         private IEnumerable<IObjectMapper> _allMappers;
+        private int _countOfDefaultMappers;
 
         protected override void CleanUp()
         {
@@ -16,11 +17,12 @@ namespace MvcPaging.ObjectMapper.Test.AutoMapperTest
 
         protected override void Act()
         {
-            _allMappers = MapperRegistryOverride.AllMappers();
+            _allMappers = MapperRegistry.Mappers;
         }
 
         protected override void Arrange()
         {
+            _countOfDefaultMappers = MapperRegistry.Mappers.Count();
             PagedListMapper.Register();
         }
 
@@ -31,6 +33,12 @@ namespace MvcPaging.ObjectMapper.Test.AutoMapperTest
 
             Assert.IsNotNull(firstMapper);
             Assert.IsTrue(firstMapper.GetType() == typeof(PagedListMapper));
+        }
+
+        [Test]
+        public void TheMapperCollectionWillContainMoreThanTheCustomMapper()
+        {
+            Assert.IsTrue(_allMappers.Count() == _countOfDefaultMappers + 1);
         }
     }
 }

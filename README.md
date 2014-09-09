@@ -3,7 +3,7 @@ MvcPaging IPagedListMapper for AutoMapper
 
 I am a big fan of the [MvcPaging Library] (https://github.com/martijnboland/MvcPaging) and [AutoMapper] (https://github.com/AutoMapper/AutoMapper).
 
-When I tried to map an IEnumerable<T> to the IPagedList<T>, I found out that I needed to do a bit more work. It turns out this was a fairly common question, however:
+When I tried map an IEnumerable<T> to the IPagedList<T>, I found out that I needed to do a bit more work. It turns out this was a fairly common question, however:
 
 1. Most of the answers used another Paging Library (however, the interfaces were nearly identical)
 2. Jimmy Bogard (AutoMapper Author) recommended creating an IObjectMapper. 

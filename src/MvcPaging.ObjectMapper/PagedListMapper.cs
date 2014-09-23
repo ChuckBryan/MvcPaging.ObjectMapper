@@ -51,16 +51,12 @@ namespace MvcPaging.ObjectMapper
 
         /// <summary>
         /// This method is used to add the PagedObjectListMapper to the top of AllMappers.
+        /// 
+        /// Note: This should be called AFTER Mapper.Initialize because Initialize calls MapperRegistry.Reset()
         /// </summary>
         public static void Register()
         {
-            var allMappers = new[] {new PagedListMapper()}.Union(MapperRegistry.Mappers.ToList());
-
-            MapperRegistry.Mappers.Clear();
-
-            allMappers.ToList().ForEach(mapper=> MapperRegistry.Mappers.Add(mapper));
-
-
+            MapperRegistry.Mappers.Insert(0, new PagedListMapper());
         }
     }
 }
